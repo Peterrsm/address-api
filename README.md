@@ -49,6 +49,8 @@ O fluxo de dados foi desenhado para isolar as dependências externas em containe
 - Docker instalado.
 - Maven (opcional, caso prefira rodar fora do container).
 
+---
+
 ### Passo a Passo
 1. **Subir a Infraestrutura:**
    Na raiz do projeto, execute:
@@ -61,6 +63,8 @@ O fluxo de dados foi desenhado para isolar as dependências externas em containe
    acesse via navegador ou Postman:
 GET http://localhost:8080/cep/01001000
 
+---
+
 ## Estrutura dos logs
 Cada consulta gera um registro no banco de dados com:
 
@@ -71,6 +75,8 @@ Cada consulta gera um registro no banco de dados com:
 - localidade: O dado (local) obtido pelo cliente.
 
 - logradouro: Endereço completo retornado pela API externa (Mockoon).
+
+---
 
 ## Princípios SOLID Aplicados
 O código foi estruturado com foco em:
