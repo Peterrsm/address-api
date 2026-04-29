@@ -1,0 +1,72 @@
+{
+  "name": "Mock API CEP",
+  "routes": [
+    {
+      "endpoint": "cep/:cep",
+      "method": "get",
+      "responses": [
+        {
+          "body": "{\"cep\": \"{{urlParam 'cep'}} \", \"logradouro\": \"Praça da Sé\", \"bairro\": \"Sé\", \"localidade\": \"São Paulo\", \"uf\": \"SP\"}",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "uuid": "0ab9f277-4c42-41c1-b093-b92fc15a9b24",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "uuid": "680f2d9c-be19-40f0-bf2b-243dec8e939a",
+      "type": "http",
+      "documentation": "",
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "uuid": "9e9d34c4-431a-48f9-a09f-2bd75302435f",
+  "lastMigration": 33,
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3000,
+  "hostname": "",
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "680f2d9c-be19-40f0-bf2b-243dec8e939a"
+    }
+  ],
+  "folders": [],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [],
+  "proxyReqHeaders": [],
+  "proxyResHeaders": [],
+  "data": [],
+  "callbacks": []
+}

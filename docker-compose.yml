@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16
+    container_name: postgres-address-api
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: address_db
+    ports:
+      - "5432:5432"
+    restart: always
+
+  mock-api:
+    image: mockoon/cli:latest
+    container_name: mock-api-mockoon
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./mock-data.json:/data/data.json
+    command: ["-d", "/data/data.json", "--port", "3000"]
+    restart: always
