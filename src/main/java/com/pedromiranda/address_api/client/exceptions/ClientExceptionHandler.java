@@ -13,7 +13,7 @@ public class ClientExceptionHandler {
 
     @ExceptionHandler(CepException.class)
     public ResponseEntity<StandardError> cardNotFoundException(CepException ex, HttpServletRequest request) {
-        String err = "CARD DO NOT EXIST";
+        String err = "INVALID CEP";
         HttpStatus status = HttpStatus.BAD_REQUEST;
         StandardError error = new StandardError(
                 LocalDateTime.now(),
