@@ -36,7 +36,7 @@ public class CepClientImpl implements ICepClient {
 
             return restTemplate.getForObject(url, AddressResponse.class);
         } catch (Exception e) {
-            System.err.println("Erro na chamada: " + e.getMessage());
+            log.error("Erro na chamada: {}", e.getMessage());
             throw e;
         }
     }
