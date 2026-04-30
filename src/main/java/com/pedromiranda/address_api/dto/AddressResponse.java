@@ -8,4 +8,11 @@ public record AddressResponse(
         String localidade,
         String uf
 ) {
+    @Override
+    public String toString() {
+        return "Endereço Bancário { " +
+                "CEP: '" + cep + '\'' +
+                ", Cidade: '" + localidade + "/" + uf + '\'' +
+                " }";
+    }
 }
